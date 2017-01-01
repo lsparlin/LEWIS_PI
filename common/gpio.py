@@ -1,12 +1,12 @@
 import time
 import RPi.GPIO as GPIO
 
-def gcmMode():
+def bcmMode():
   GPIO.setwarnings(False)
   GPIO.setmode(GPIO.BCM)
 
 def myMode():
-  gcmMode()
+  bcmMode()
 
 def setupPinOut(pinNumber):
   GPIO.setup(pinNumber, GPIO.OUT)

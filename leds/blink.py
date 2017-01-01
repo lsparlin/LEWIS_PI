@@ -15,10 +15,6 @@ green=22
 colorMap={1:white, 2:yellow, 3:blue, 4:red, 5:green}
 gpio.setupPinOut([white, yellow, blue, red, green])
 
-# setup beep
-BEEP_PIN=25
-gpio.setupPinOut(BEEP_PIN)
-
 # Main
 try:
   lightDur=0.1
