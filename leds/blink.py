@@ -6,15 +6,6 @@ gpio.bcmMode()
 
 RUNNING=True
 
-# setup colors
-white=4
-yellow=17
-blue=13
-red=27
-green=22
-colorMap={1:white, 2:yellow, 3:blue, 4:red, 5:green}
-gpio.setupPinOut([white, yellow, blue, red, green])
-
 # Main
 try:
   lightDur=0.1
@@ -27,7 +18,7 @@ try:
   if (len(sys.argv) > 3):
     mode = sys.argv[3]
   
-  led.blinkLights(RUNNING, colorMap, lightDur, iterations, mode, None)
+  led.blinkLights(RUNNING, lightDur, iterations, mode, None)
   
 except KeyboardInterrupt:
     RUNNING = False
