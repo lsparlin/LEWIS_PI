@@ -22,7 +22,7 @@ try:
   if (len(sys.argv) > 3):
     mode = sys.argv[3]
   
-  led.blinkLights(RUNNING, lightDur, iterations, mode, lambda:buzzer.beep(BEEP_PIN, 0.01))
+  led.blinkLights(RUNNING, lightDur, iterations, mode, lambda:buzzer.beep(BEEP_PIN, 0.003))
   
 except KeyboardInterrupt:
     RUNNING = False

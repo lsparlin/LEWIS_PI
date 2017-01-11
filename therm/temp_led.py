@@ -1,6 +1,7 @@
 
 import time, math
 import RPi.GPIO as GPIO
+import rgb
 
 GPIO.setmode(GPIO.BCM)
 
@@ -11,11 +12,11 @@ temp_high = 85
 a_pin = 23
 b_pin = 24
 
+GPIO.setup(led_list, GPIO.OUT)
 for x in range(0, len(led_list)):
-    GPIO.setup(led_list[x], GPIO.OUT)
     GPIO.output(led_list[x], False)
 
-adjustment_value = 0.37
+adjustment_value = 0.385
 
 def resistance_reading():
     total = 0
@@ -74,8 +75,16 @@ try:
             t = temp_high
 
         num_leds = int(round(((t-temp_low) / (temp_high-temp_low))*5))
+        if num_leds < 1:
+            num_leds = 1
         for x in range(0, num_leds):
             GPIO.output(led_list[x], True)
+        if num_leds >= 4:
+            # candle is ignited
+            rgb.redOnly()
+        else :
+            # candle is out
+            rgb.blueOnly()
 
         time.sleep(0.3)
     
