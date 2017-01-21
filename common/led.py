@@ -1,15 +1,22 @@
 import gpio
 import time
 
+white=4
+yellow=17
+red=13
+green=27
+blue=22
+
 def myColors():
-  white=4
-  yellow=17
-  red=13
-  green=27
-  blue=22
   colorMap={1:white, 2:yellow, 3:red, 4:green, 5:blue}
   gpio.setupPinOut([white, yellow, blue, red, green])
   return colorMap
+
+def myColorsByName():
+  colorMap={'white':white, 'yellow':yellow, 'red':red, 'green':green, 'blue':blue}
+  gpio.setupPinOut([white, yellow, blue, red, green])
+  return colorMap
+
 
 def myRgbColors():
   red=26

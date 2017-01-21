@@ -1,0 +1,17 @@
+
+.btn .glyphicon {
+	visibility: hidden;
+	position: absolute;
+	top: .65em;
+	right: 2em;
+}
+
+#beep .glyphicon {
+	visibility: visible;
+	position: inherit;
+}
+
+
+.led-on .glyphicon {
+	visibility: visible;
+}

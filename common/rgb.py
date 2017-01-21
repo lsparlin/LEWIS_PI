@@ -8,6 +8,10 @@ green=19
 blue=6
 gpio.setupPinOut([red, green, blue])
 
+def myColorsByName():
+    colorMap = {'red': 26, 'green': 19, 'blue': 6}
+    return colorMap
+
 def redOn():
   gpio.pinOn(red)
 

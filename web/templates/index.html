@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+ 	<head>
+ 	 	<title>Lewis Pi Board</title>
+		 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+		 <link href="/static/index.css" rel="stylesheet"/>
+		 <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+		 </script>
+		 <script src="static/index.js"></script>
+ 	</head>
+ 	<body>
+		<div class="container-fluid">
+			<div class="jumbotron">
+ 				<h1>Welcome to my Breadboard</h1>
+				<p>Click around and have fun</p>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-2 col-sm-offset-1">
+					<button class="btn btn-lg btn-block  btn-primary {{'led-on' if colorStates.get('blue') else ''}}" color="blue">
+						Blue
+						<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="col-sm-2">
+					<button class="btn btn-lg btn-block  btn-success {{'led-on' if colorStates.get('green') else ''}}" color="green">
+						Green
+						<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="col-sm-2">
+					<button class="btn btn-lg btn-block btn-danger {{'led-on' if colorStates.get('red') else ''}}" color="red">
+						Red
+						<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="col-sm-2">
+					<button  class="btn btn-lg btn-block btn-warning {{'led-on' if colorStates.get('yellow') else ''}}" color="yellow">
+						Yellow
+						<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="col-sm-2">
+					<button  class="btn btn-lg btn-block btn-default {{'led-on' if colorStates.get('white') else ''}}" color="white">
+						White
+						<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="col-sm-1"></div>
+			</div>
+	
+			<br/><br/>
+	
+			<div class="row">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
+					<button class="btn btn-lg btn-block btn-default" id="beep">
+					 	BEEP 
+						<span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="col-sm-2"></div>
+			</div>
+	
+			<br/><br/>
+	
+			<div class="row">
+				<div class="col-sm-12">
+				<div class="panel panel-default">
+
+					<div class="panel-heading">
+						RGB Light
+					</div>
+					<div class="panel-body">
+						<div class="col-sm-4">
+							<button class="btn btn-lg btn-block btn-danger {{'led-on' if rgbStates.get('red') else ''}}" rgbcolor="red">
+								Red
+								<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+							</button>
+						</div>
+						<div class="col-sm-4">
+							<button class="btn btn-lg btn-block btn-success {{'led-on' if rgbStates.get('green') else ''}}" rgbcolor="green">
+								Green
+							<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+						</button>
+						</div>
+						<div class="col-sm-4">
+							<button class="btn btn-lg btn-block btn-primary {{'led-on' if rgbStates.get('blue') else ''}}" rgbcolor="blue">
+								Blue
+								<span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+							</button>
+						</div>
+					</div>
+
+				</div>
+				</div>
+			</div>
+
+		</div>
+ 	</body>
+</html>
